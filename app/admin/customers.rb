@@ -1,5 +1,6 @@
 ActiveAdmin.register Customer do
-
+remove_filter :image_attachment;
+remove_filter :image_blob;
   # See permitted parameters documentation:
   # https://github.com/activeadmin/activeadmin/blob/master/docs/2-resource-customization.md#setting-up-strong-parameters
   #
@@ -15,6 +16,17 @@ ActiveAdmin.register Customer do
   #   permitted
   # end
 
-  permit_params :full_name, :phone_number, :email, :notes
+  permit_params :full_name, :phone_number, :email, :notes,:image
+
+  form do |f|
+    f.inputs do
+      f.input :full_name
+      f.input :phone_number
+      f.input :email
+      f.input :notes
+      f.input :image, as: :file
+    end
+    f.actions
+  end
   
 end
