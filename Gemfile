@@ -1,7 +1,7 @@
 source "https://rubygems.org"
 
 ruby "3.3.0"
-
+gem 'sassc-rails'
 # Bundle edge Rails instead: gem "rails", github: "rails/rails", branch: "main"
 gem "rails", "~> 7.1.3"
 
@@ -65,3 +65,7 @@ group :test do
   gem "capybara"
   gem "selenium-webdriver"
 end
+
+gem "activeadmin", "~> 3.2"
+
+gem "devise", "~> 4.9"
