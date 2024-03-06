@@ -1,0 +1,9 @@
+<div class="w-[300px] border m-8 p-8">
+<h2><%=customer.full_name%></h2>
+<%if (!customer.image.nil?)%>
+<%= image_tag url_for(customer.image) %>
+<%end%>
+
+<div class='font-bold my-8'><%=customer.phone_number%></div>
+<div><%=customer.email%></div>
+</div>
